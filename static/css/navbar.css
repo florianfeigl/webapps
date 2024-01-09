@@ -1,0 +1,49 @@
+/* navigation settings */
+
+nav {
+    font-family: 'Monospace';
+    font-size: ;
+    width: 60%;
+    margin: auto;
+}
+
+.navigation-wrapper {
+    display: flex;
+    align-items: start;
+}
+
+.navigation-links {
+    flex: 1;
+}
+
+.navigation-links ul { 
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigation-links li a {
+    color: #e3e0cc;
+    padding: 8px;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px grey;
+    text-decoration: none;
+    transition: .3s color;
+}
+
+.navigation-links li a:hover {
+    color: #555;
+    border-radius: 3px;
+    text-shadow: #c5d5c5 3px 3px 3px;
+    background-color: #e3e0cc;/* #9fa9a3; #c5d5c5; */
+    transition-delay: 0s;
+}
+
+.navigation-ascii-art {
+    font-family: 'Monospace';
+    color: #e3e0cc;
+    text-shadow: 3px 3px 3px grey;
+    flex: 1;
+    white-space: pre;
+}
