@@ -15,7 +15,7 @@ def add_id_to_front_matter(directory, start_id=0):
         if not has_id:
             # Find the index of the first '---' which starts the front matter
             start_of_front_matter = lines.index('---\n') + 1
-            lines.insert(start_of_front_matter, f'id: {start_id}\n')
+            lines.insert(start_of_front_matter, f'id: \\#{start_id}\n')
             start_id += 1
 
             with open(file_path, 'w', encoding='utf-8') as file:

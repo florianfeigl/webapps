@@ -12,6 +12,14 @@ main {
     padding: 8rem;
 }
 
+.post_id a {
+    font-weight: bold;
+    text-decoration: none;
+    padding: 3px;
+    background-color: #9fa9a3; 
+    border-radius: 2px;
+    color: #e3e0cc;
+}
 .card {
    /* box-shadow: 5px 5px 5px #ccc; */
     padding-bottom: 20px;

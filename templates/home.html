@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% block home %}
-<div class="post" style="border: 1px solid black;">
-    <h1>Latest news!</h1>
+<div class="post" style="border: 2px solid grey;">
+    <h1>Latest articles!</h1>
         {% if posts %}
         {% for post in posts %}
         <div class="card">
-            <div>
+            <div class="post_id">
                 <a href="#">{{post.id}}</a>
+                <b>{{post.date}}</b>:
                 <b>{{post.title}}</b>
-                <b>{{post.date}}</b>
             </div>
             <small>{{post.body}}</small>
         </div>
