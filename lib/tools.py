@@ -22,8 +22,7 @@ def load_posts(directory) -> list:
             
     return posts
 
-    
-
+   
 # Adds/removes quotes (") from elements
 def clean_frontmatter(path):
     with open(file_path, 'r', encoding='utf-8') as file:
