@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block home %}
+<div class="post" style="border: 2px solid grey;">
+    <h1>Latest articles!</h1>
+        {% if posts %}
+        {% for post in posts %}
+        <div class="card">
+            <div class="post_id">
+                <a href="#">{{post.id}}</a>
+                <b>{{post.date}}</b>:
+                <b>{{post.title}}</b>
+            </div>
+            <small>{{post.body | safe}}</small>
+        </div>
+        {% endfor %}
+        {% endif %}
+        <br>
+        <a href="#">Archive</a>
+</div>
+{% endblock home %}
