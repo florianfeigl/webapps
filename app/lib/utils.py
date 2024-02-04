@@ -38,7 +38,7 @@ def load_posts(directory: str) -> list:
             post = frontmatter.load(content)
             html = bleach.clean(
                 (markdown.markdown(post.content)),
-                tags=["p", "h1", "h2", "h3", "ul", "li", "strong", "em", "a"],
+                tags=["p", "h1", "h2", "h3", "ul", "ol", "li", "strong", "em", "a"],
                 attributes={"a": ["href", "title"]},
             )
             rendered_post = {
