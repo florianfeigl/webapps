@@ -18,6 +18,28 @@ import markdown
 #
 #    return BaseModel
 
+# tags and attributes for bleach clean
+allowed_tags = [
+    "h1",
+    "h2",
+    "h3",
+    "img",
+    "a",
+    "p",
+    "br",
+    "strong",
+    "em",
+    "ul",
+    "ol",
+    "li",
+]
+
+allowed_attributes = {
+    "*": ["class"],
+    "img": ["src", "alt", "title", "width", "height"],
+    "a": ["href", "title", "target"],
+}
+
 
 def load_posts(directory: str) -> list:
     # Variable for directory path, empty list to load posts
@@ -38,8 +60,8 @@ def load_posts(directory: str) -> list:
             post = frontmatter.load(content)
             html = bleach.clean(
                 (markdown.markdown(post.content)),
-                tags=["p", "h1", "h2", "h3", "ul", "ol", "li", "strong", "em", "a"],
-                attributes={"a": ["href", "title"]},
+                tags=allowed_tags,
+                attributes=allowed_attributes,
             )
             rendered_post = {
                 "id": post.get("id", None),
