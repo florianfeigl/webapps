@@ -5,3 +5,4 @@ markdown
 markdown-checklist
 python-frontmatter
 uvicorn[standard]
+gunicorn
