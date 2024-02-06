@@ -19,12 +19,27 @@ import markdown
 #    return BaseModel
 
 # tags and attributes for bleach clean
-allowed_tags = ['div', 'img', 'p', 'a', 'ul', 'ol', 'li', 'strong', 'em', 'br']
+allowed_tags = [
+    "h1",
+    "h2",
+    "h3",
+    "img",
+    "a",
+    "p",
+    "br",
+    "strong",
+    "em",
+    "ul",
+    "ol",
+    "li",
+]
+
 allowed_attributes = {
-    'div': ['class'],
-    'img': ['src', 'alt', 'title', 'width', 'height'],
-    'a': ['href', 'title', 'rel'],
+    "*": ["class"],
+    "img": ["src", "alt", "title", "width", "height"],
+    "a": ["href", "title", "target"],
 }
+
 
 def load_posts(directory: str) -> list:
     # Variable for directory path, empty list to load posts
