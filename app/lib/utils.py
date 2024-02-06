@@ -19,7 +19,21 @@ import markdown
 #    return BaseModel
 
 # allowed parameters for bleach
-allowed_tags = ["div", "img", "p", "a", "ul", "ol", "li", "strong", "em", "br"]
+allowed_tags = [
+    "div",
+    "img",
+    "h1",
+    "h2",
+    "h3",
+    "p",
+    "a",
+    "ul",
+    "ol",
+    "li",
+    "strong",
+    "em",
+    "br",
+]
 allowed_attributes = {
     "div": ["class"],
     "img": ["src", "alt", "title", "width", "height"],
