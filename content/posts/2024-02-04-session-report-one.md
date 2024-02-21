@@ -27,4 +27,4 @@ Today, we tackled several key areas to enhance your FastAPI application and its 
 -    **Discover Enhancements**: Research and implement new features or technologies to expand the functionality and reach of your websites.
 -    **Implement Pagination**: Plan and add pagination to efficiently manage and navigate large datasets or content pages.
 
-Stay curious and tuned, nerds!
+Stay curious and tuned!

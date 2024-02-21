@@ -18,26 +18,26 @@ import markdown
 #
 #    return BaseModel
 
-# allowed parameters for bleach
+# tags and attributes for bleach clean
 allowed_tags = [
-    "div",
-    "img",
     "h1",
     "h2",
     "h3",
-    "p",
+    "img",
     "a",
+    "p",
+    "br",
+    "strong",
+    "em",
     "ul",
     "ol",
     "li",
-    "strong",
-    "em",
-    "br",
 ]
+
 allowed_attributes = {
-    "div": ["class"],
+    "*": ["class"],
     "img": ["src", "alt", "title", "width", "height"],
-    "a": ["href", "title", "rel"],
+    "a": ["href", "title", "target"],
 }
 
 
