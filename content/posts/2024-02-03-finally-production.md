@@ -19,8 +19,6 @@ At this point, what really got me a huge push forward in this was setting up **N
 
 Check it out: [Neovim for Newbs](https://youtu.be/zHTeCSVAFNY?list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn)
 
-{% include ../../app/templates/include/youtube.html id="zHTeCSVAFNY" %}
-
 <!-- [![Neovim for Newbs.](https://img.youtube.com/vi/zHTeCSVAFNY/maxresdefault.jpg)(https://www.youtube.com/embed/zHTeCSVAFNY?list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn)] -->
 
 Stay curious, nerds!
