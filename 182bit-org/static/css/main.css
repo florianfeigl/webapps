@@ -1,0 +1,48 @@
+/* main block: 60% of the 100% width of body{} */
+
+main {
+    font-family: 'Monospace';
+    font-size: 1rem;
+    width: 60%;
+    margin: auto;
+    background-color: #e3e0cc;
+}
+
+.post {
+    padding: 8rem;
+}
+
+.post_id a {
+    font-weight: bold;
+    text-decoration: none;
+    padding: 3px;
+    background-color: #9fa9a3; 
+    border-radius: 2px;
+    color: #e3e0cc;
+}
+.card {
+   /* box-shadow: 5px 5px 5px #ccc; */
+    padding-bottom: 3rem;
+}
+
+/* .card{
+    display: block;
+    background-color: white;
+    box-shadow: 5px 5px 5px #ccc;
+    max-width: 18rem;
+    max-height: 18rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3px;
+    margin-bottom: 5px;
+}
+.card a{
+    text-decoration: none;
+    padding: 2px;
+    background-color: teal;
+    color: white;
+    font-size: 36px;
+}
+.card small{
+    margin-top: auto;
+} */
