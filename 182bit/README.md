@@ -1,6 +1,7 @@
-## 182BIT.ORG
-Proof of concept project. Planned features include:
+## 182BIT
+Proof of concept project. 
+
 * Creating a web framework backbone using FastAPI
 * Monitoring servers
-* Maybe tutorials
 * Nextcloud service
+* Create a service to run the app instead of starting gunicorn/uvicorn via a sh-file.
