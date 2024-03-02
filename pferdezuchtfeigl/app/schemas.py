@@ -1,35 +1,21 @@
 # schemas.py
 
 from pydantic import BaseModel
+from datetime import date
 from typing import List, Optional
 
-class BreedingBase(BaseModel):
-    date: Optional[date] = None
-    stallion: str
-    offspring_name: str
-
-class BreedingCreate(BreedingBase):
-    pass
-
-class Breeding(BreedingBase):
-    id: int
-    mare_id: int
-
-    class Config:
-        orm_mode = True
-
-class MareBase(BaseModel):
-    name: str
-    birth_year: int
-    breed: str
-
-class MareCreate(MareBase):
-    pass
-
-class Mare(MareBase):
-    id: int
-    breedings: List[Breeding] = []
-
-    class Config:
-        orm_mode = True
-
+class HorseCreate(BaseModel):
+	name: str
+	sex: str
+	birth: date
+	color: str
+	region: str
+	
+	@validator('sex')
+	def correct_sex_formatchecker(cls, sex_input):
+		if len(sex_input) != 1 or v not in ('M', 'S', 'G'):
+			raise ValueError('Sex must be \[M\]are, \[S\]tallion or \[G\]elding.')
+		return sex_input
+		
+	class Config:
+		orm_mode = True

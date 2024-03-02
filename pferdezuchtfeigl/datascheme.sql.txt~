@@ -4,12 +4,16 @@ CREATE TABLE horses (
   sex CHAR(1),
   birth DATE,
   color VARCHAR(50),
-  region VARCHAR(255)
+  region VARCHAR(255),
+  pedigree_id INTEGER,
+  breeding_id INTEGER,
+  FOREIGN KEY (pedigree_id) REFERENCES pedigree(id),
+  FOREIGN KEY (breeding_id) REFERENCES breeding(id)
 );
 
 CREATE TABLE pedigree (
   id SERIAL PRIMARY KEY,
-  horse_id INTEGER,
+  name_id INTEGER,
   sire_id INTEGER,
   dam_id INTEGER,
   damsire_id INTEGER,

@@ -3,9 +3,9 @@
 from sqlalchemy.orm import Session
 from . import models, schemas
 
-def create_mare(db: Session, mare: schemas.MareCreate):
-    db_mare = models.Mare(name=mare.name, birth_year=mare.birth_year, breed=mare.breed)
-    db.add(db_mare)
+def create_horse(db: Session, horse: schemas.HorseCreate):
+    db_horse = models.Horse(name=horse.name, sex=horse.sex, birth=horse.birth, color=horse.color, region=horse.region)
+    db.add(db_horse)
     db.commit()
-    db.refresh(db_mare)
-    return db_mare
+    db.refresh(db_horse)
+    return db_horse
