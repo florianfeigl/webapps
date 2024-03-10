@@ -5,3 +5,4 @@ A project to collect data of on horse breeding, serve as a source of information
 + Create database tables for a PostgreSQL
 + Build CRUD frontend to make database accessible for end-users
 + Design the website 
++ Merch Hoodies (Gelato?)
