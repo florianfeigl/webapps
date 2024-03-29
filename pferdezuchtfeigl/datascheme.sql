@@ -1,12 +1,14 @@
 CREATE TABLE horses (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(255),
+  name VARCHAR(50),
   sex CHAR(1),
   birth DATE,
   color VARCHAR(50),
-  region VARCHAR(255),
-  owner_id VARCHAR(255),
-  breeder_id VARCHAR(255),
+  region VARCHAR(50,
+  owner_id INTEGER,
+  breeder_id INTEGER, 
+  status VARCHAR(50),
+  horsetelex VARCHAR(255),
   FOREIGN KEY (owner_id) REFERENCES contacts(id),
   FOREIGN KEY (breeder_id) REFERENCES contacts(id)
 );
@@ -17,7 +19,7 @@ CREATE TABLE pedigree (
   sire_id INTEGER,
   dam_id INTEGER,
   damsire_id INTEGER,
-  FOREIGN KEY (name_id) REFERENCES horses(id),
+  FOREIGN KEY (horse_id) REFERENCES horses(id),
   FOREIGN KEY (sire_id) REFERENCES horses(id),
   FOREIGN KEY (dam_id) REFERENCES horses(id),
   FOREIGN KEY (damsire_id) REFERENCES horses(id)
@@ -35,10 +37,16 @@ CREATE TABLE breeding (
   FOREIGN KEY (offspring_id) REFERENCES horses(id)
 );
 
+CREATE TABLE activities (
+  id SERIAL PRIMARY KEY,
+  year DATE,
+  prix VARCHAR(255)
+);
+
 CREATE TABLE contacts (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   address VARCHAR(255),
-  phone INTEGER,
+  phone VARCHAR(50),
   mail VARCHAR(255)
 );
