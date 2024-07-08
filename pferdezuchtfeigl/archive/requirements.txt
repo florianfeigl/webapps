@@ -1,8 +1,0 @@
-bleach
-fastapi
-jinja2
-markdown
-markdown-checklist
-python-frontmatter
-uvicorn[standard]
-gunicorn
