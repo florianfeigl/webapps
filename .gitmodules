@@ -1,0 +1,3 @@
+[submodule "cs-plus"]
+	path = cs-plus
+	url = https://gitlab.cosy.sbg.ac.at/feivel/cs-plus.git
